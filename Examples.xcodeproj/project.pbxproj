@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		F9B625601FA6C03800D60493 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B6255F1FA6C03800D60493 /* AppDelegate.swift */; };
-		F9B625621FA6C03800D60493 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B625611FA6C03800D60493 /* ViewController.swift */; };
+		F9B625621FA6C03800D60493 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B625611FA6C03800D60493 /* RootViewController.swift */; };
 		F9B625651FA6C03800D60493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9B625631FA6C03800D60493 /* Main.storyboard */; };
 		F9B625671FA6C03800D60493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9B625661FA6C03800D60493 /* Assets.xcassets */; };
 		F9B6256A1FA6C03800D60493 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9B625681FA6C03800D60493 /* LaunchScreen.storyboard */; };
+		F9B625741FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B625731FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift */; };
+		F9F32B151FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B141FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift */; };
+		F9F32B181FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B171FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F9B6255C1FA6C03800D60493 /* Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Examples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9B6255F1FA6C03800D60493 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F9B625611FA6C03800D60493 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F9B625611FA6C03800D60493 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F9B625641FA6C03800D60493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9B625661FA6C03800D60493 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9B625691FA6C03800D60493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9B6256B1FA6C03800D60493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9B625731FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewZoomExampleVc.swift; sourceTree = "<group>"; };
+		F9F32B141FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnimatorVcViewController.swift; sourceTree = "<group>"; };
+		F9F32B171FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewAutoLayoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,41 @@
 		F9B6255E1FA6C03800D60493 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				F9B625721FA6C1D900D60493 /* Controllers */,
 				F9B6255F1FA6C03800D60493 /* AppDelegate.swift */,
-				F9B625611FA6C03800D60493 /* ViewController.swift */,
+				F9B625611FA6C03800D60493 /* RootViewController.swift */,
 				F9B625631FA6C03800D60493 /* Main.storyboard */,
 				F9B625661FA6C03800D60493 /* Assets.xcassets */,
 				F9B625681FA6C03800D60493 /* LaunchScreen.storyboard */,
 				F9B6256B1FA6C03800D60493 /* Info.plist */,
 			);
 			path = Examples;
+			sourceTree = "<group>";
+		};
+		F9B625721FA6C1D900D60493 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F9F32B161FAAFD7600B0B3C8 /* ScrollviewAutolayout */,
+				F9F32B131FAABD6400B0B3C8 /* ImageAnimator */,
+				F9B625731FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F9F32B131FAABD6400B0B3C8 /* ImageAnimator */ = {
+			isa = PBXGroup;
+			children = (
+				F9F32B141FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift */,
+			);
+			path = ImageAnimator;
+			sourceTree = "<group>";
+		};
+		F9F32B161FAAFD7600B0B3C8 /* ScrollviewAutolayout */ = {
+			isa = PBXGroup;
+			children = (
+				F9F32B171FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift */,
+			);
+			path = ScrollviewAutolayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +169,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9B625621FA6C03800D60493 /* ViewController.swift in Sources */,
+				F9F32B151FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift in Sources */,
+				F9F32B181FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift in Sources */,
+				F9B625621FA6C03800D60493 /* RootViewController.swift in Sources */,
 				F9B625601FA6C03800D60493 /* AppDelegate.swift in Sources */,
+				F9B625741FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
