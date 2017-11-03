@@ -71,7 +71,11 @@ class PassbookCardViewController: UIViewController {
         guard let index = views.index(of: view) else {
             return
         }
-        animateViewAt(index: index)
+        if !self.willAnimate {
+            animateViewAt(index: index)
+        } else {
+            self.reset()
+        }
     }
     
     @objc func pan(gesture: UIPanGestureRecognizer) {
@@ -79,32 +83,35 @@ class PassbookCardViewController: UIViewController {
             return
         }
         let position = gesture.translation(in: view)
-        print("postioins", position.x, position.y)
+//        print("postioins", position.x, position.y)
         guard let index = self.views.index(of: view) else {
             return
         }
-        if position.y < 0 {
+        if position.y < 0 && !self.willAnimate {
             self.view.removeConstraints(self.animationConstrains)
+            let height = min(67 - position.y, self.maxHeight)
+            let top = self.maxHeight - 5 * 67 + position.y
             var visualFormal = "V:|"
             for i in 0...(self.views.count - 1) {
                 let key = "view\(i)"
                 var value = "-0-[\(key)(67)]"
                 if i == 0 {
-                    value = "-(\(self.maxHeight - 5 * 67 + position.y))-[\(key)(67)]"
+                    value = "-(\(top))-[\(key)(67)]"
                 }
                 if i == index {
-                    value = "-0-[\(key)(\(67-position.y))]"
+                    value = "-0-[\(key)(\(height))]"
                 }
                 if i == 0 && i == index {
-                    value = "-(\(self.maxHeight - 5 * 67 + position.y))-[\(key)(\(67-position.y))]"
+                    value = "-(\(top))-[\(key)(\(height))]"
                 }
                 visualFormal.append(value)
             }
             self.animationConstrains = NSLayoutConstraint.constraints(withVisualFormat: visualFormal, options: NSLayoutFormatOptions.init(rawValue: 0), metrics: nil, views: self.viewsDict)
             self.view.addConstraints(self.animationConstrains)
         }
-        if position.y > 0 {
+        if position.y > 0 && self.willAnimate {
             self.view.removeConstraints(self.animationConstrains)
+            let height = max((self.maxHeight - position.y), 67)
             var visualFormal = "V:|"
             for i in 0...(self.views.count - 1) {
                 let key = "view\(i)"
@@ -113,10 +120,10 @@ class PassbookCardViewController: UIViewController {
                     value = "-(\(-1 * CGFloat(index) * 67 + position.y))-[\(key)(67)]"
                 }
                 if i == index {
-                    value = "-0-[\(key)(\(self.maxHeight - position.y))]"
+                    value = "-0-[\(key)(\(height))]"
                 }
                 if i == 0 && i == index {
-                    value = "-(\(-1 * CGFloat(index) * 67 + position.y))-[\(key)(\(self.maxHeight - position.y))]"
+                    value = "-(\(-1 * CGFloat(index) * 67 + position.y))-[\(key)(\(height))]"
                 }
                 visualFormal.append(value)
             }
@@ -125,52 +132,52 @@ class PassbookCardViewController: UIViewController {
         }
         
         if gesture.state == .ended {
-            if position.y >= 40 || position.y <= -40 {
-                self.animateViewAt(index: index)
+            if willAnimate {
+                if position.y >= 40 { self.reset() }
+                else { self.animateViewAt(index: index) }
+            } else {
+                if position.y <= -40 { self.animateViewAt(index: index) }
+                else { self.reset() }
             }
         }
     }
     
     func reset() {
-        self.view.removeConstraints(self.animationConstrains)
-        var visualFormal = "V:"
-        for i in 0...(self.views.count - 1) {
-            let value = "[view\(i)(67)]-0-"
-            visualFormal.append(value)
+        self.willAnimate = false
+        UIView.animate(withDuration: 0.3) {
+            self.view.removeConstraints(self.animationConstrains)
+            var visualFormal = "V:"
+            for i in 0...(self.views.count - 1) {
+                let value = "[view\(i)(67)]-0-"
+                visualFormal.append(value)
+            }
+            visualFormal.append("|")
+            self.animationConstrains = NSLayoutConstraint.constraints(withVisualFormat: visualFormal, options: NSLayoutFormatOptions.init(rawValue: 0), metrics: nil, views: self.viewsDict)
+            self.view.addConstraints(self.animationConstrains)
+            self.view.layoutIfNeeded()
         }
-        visualFormal.append("|")
-        self.animationConstrains = NSLayoutConstraint.constraints(withVisualFormat: visualFormal, options: NSLayoutFormatOptions.init(rawValue: 0), metrics: nil, views: self.viewsDict)
-        self.view.addConstraints(self.animationConstrains)
     }
     
     func animateViewAt(index: Int) {
-        if !self.willAnimate {
-            self.willAnimate = true
-            UIView.animate(withDuration: 0.3, animations: {
-                self.view.removeConstraints(self.animationConstrains)
-                var visualFormal = "V:|"
-                for i in 0...(self.views.count - 1) {
-                    let key = "view\(i)"
-                    var value = "-0-[\(key)(67)]"
-                    if i == 0 {
-                        value = "-(-\(index*67))-[\(key)(67)]"
-                    }
-                    if i == index {
-                        value = "-0-[\(key)(\(self.maxHeight))]"
-                    }
-                    visualFormal.append(value)
+        self.willAnimate = true
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.removeConstraints(self.animationConstrains)
+            var visualFormal = "V:|"
+            for i in 0...(self.views.count - 1) {
+                let key = "view\(i)"
+                var value = "-0-[\(key)(67)]"
+                if i == 0 {
+                    value = "-(-\(index*67))-[\(key)(67)]"
                 }
-                self.animationConstrains = NSLayoutConstraint.constraints(withVisualFormat: visualFormal, options: NSLayoutFormatOptions.init(rawValue: 0), metrics: nil, views: self.viewsDict)
-                self.view.addConstraints(self.animationConstrains)
-                self.view.layoutIfNeeded()
-            })
-        } else {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.reset()
-                self.view.layoutIfNeeded()
-            })
-            self.willAnimate = false
-        }
+                if i == index {
+                    value = "-0-[\(key)(\(self.maxHeight))]"
+                }
+                visualFormal.append(value)
+            }
+            self.animationConstrains = NSLayoutConstraint.constraints(withVisualFormat: visualFormal, options: NSLayoutFormatOptions.init(rawValue: 0), metrics: nil, views: self.viewsDict)
+            self.view.addConstraints(self.animationConstrains)
+            self.view.layoutIfNeeded()
+        })
     }
     
 
