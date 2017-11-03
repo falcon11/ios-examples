@@ -80,6 +80,26 @@
                                             <segue destination="TPo-bf-Fdm" kind="show" id="Nbe-y0-p7d"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="jug-f0-a3Z" style="IBUITableViewCellStyleDefault" id="EL2-Vl-I2a">
+                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EL2-Vl-I2a" id="JEK-mY-XjV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="PassbookCard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jug-f0-a3Z">
+                                                    <rect key="frame" x="16" y="0.0" width="344" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="4hW-GK-4c5" kind="show" id="frW-ZL-Dg1"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -123,7 +143,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WJb-5R-Fcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292" y="549.17541229385313"/>
+            <point key="canvasLocation" x="1348" y="-356"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="oT4-dc-Fgz">
@@ -138,7 +158,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVz-A9-vNt">
                                         <rect key="frame" x="8" y="8" width="359" height="1055"/>
-                                        <mutableString key="text">除此之外，就是UIScrollView特别的第二点了，就是你必须设置ContentView对应于UIScrollView的Leading Space、Trailing Space、Top Space、Bottom Space以及其width、height.
+                                        <string key="text">除此之外，就是UIScrollView特别的第二点了，就是你必须设置ContentView对应于UIScrollView的Leading Space、Trailing Space、Top Space、Bottom Space以及其width、height.
 
 这里设置Leading Space、Trailing Space、Top Space、Bottom Space的目的我简单的理解是距离ScrollView左右上下的留白区域。一般我设置Leading Space、Trailing Space、Top Space、Bottom Space都为 0。
 
@@ -150,7 +170,7 @@
 
 这里设置Leading Space、Trailing Space、Top Space、Bottom Space的目的我简单的理解是距离ScrollView左右上下的留白区域。一般我设置Leading Space、Trailing Space、Top Space、Bottom Space都为 0。
 
-在这个例子里，我们需要内容视图在ScrollView中滑起来，而且只能垂直滑动而不能水平滑动，因此我们需要把ContentView的宽设置成和ScrollView一样，但是高一定要大于ScrollView的高（因为要滑起来）。所以我设置成了这样子：</mutableString>
+在这个例子里，我们需要内容视图在ScrollView中滑起来，而且只能垂直滑动而不能水平滑动，因此我们需要把ContentView的宽设置成和ScrollView一样，但是高一定要大于ScrollView的高（因为要滑起来）。所以我设置成了这样子：</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -177,7 +197,63 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LeQ-WP-LQM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="573.60000000000002" y="1379.4602698650676"/>
+            <point key="canvasLocation" x="1348" y="1021"/>
+        </scene>
+        <!--Passbook Card View Controller-->
+        <scene sceneID="1la-3m-QAh">
+            <objects>
+                <viewController id="4hW-GK-4c5" customClass="PassbookCardViewController" customModule="Examples" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qIc-gT-8Iy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ruI-an-5PX">
+                                <rect key="frame" x="0.0" y="332" width="375" height="67"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pwT-0a-ChQ">
+                                <rect key="frame" x="0.0" y="399" width="375" height="67"/>
+                                <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhC-rb-PYA">
+                                <rect key="frame" x="0.0" y="466" width="375" height="67"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LOg-2n-8rL">
+                                <rect key="frame" x="0.0" y="533" width="375" height="67"/>
+                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMf-yQ-j9S">
+                                <rect key="frame" x="0.0" y="600" width="375" height="67"/>
+                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ruI-an-5PX" firstAttribute="trailing" secondItem="D7G-Nf-2NT" secondAttribute="trailing" id="5qh-VV-9WV"/>
+                            <constraint firstItem="pwT-0a-ChQ" firstAttribute="trailing" secondItem="D7G-Nf-2NT" secondAttribute="trailing" id="7P3-D8-Zx6"/>
+                            <constraint firstItem="fhC-rb-PYA" firstAttribute="trailing" secondItem="D7G-Nf-2NT" secondAttribute="trailing" id="812-BH-7bW"/>
+                            <constraint firstItem="LOg-2n-8rL" firstAttribute="leading" secondItem="D7G-Nf-2NT" secondAttribute="leading" id="8dB-6m-ExZ"/>
+                            <constraint firstItem="fhC-rb-PYA" firstAttribute="leading" secondItem="D7G-Nf-2NT" secondAttribute="leading" id="OBm-LG-nzS"/>
+                            <constraint firstItem="IMf-yQ-j9S" firstAttribute="leading" secondItem="D7G-Nf-2NT" secondAttribute="leading" id="TyJ-nB-HCC"/>
+                            <constraint firstItem="pwT-0a-ChQ" firstAttribute="leading" secondItem="D7G-Nf-2NT" secondAttribute="leading" id="YLW-LT-dlC"/>
+                            <constraint firstItem="LOg-2n-8rL" firstAttribute="trailing" secondItem="D7G-Nf-2NT" secondAttribute="trailing" id="Zk0-w8-soD"/>
+                            <constraint firstItem="ruI-an-5PX" firstAttribute="leading" secondItem="D7G-Nf-2NT" secondAttribute="leading" id="gie-Uq-7gJ"/>
+                            <constraint firstItem="IMf-yQ-j9S" firstAttribute="trailing" secondItem="D7G-Nf-2NT" secondAttribute="trailing" id="hnL-ze-t7l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="D7G-Nf-2NT"/>
+                    </view>
+                    <connections>
+                        <outlet property="view0" destination="ruI-an-5PX" id="hNb-oc-9qt"/>
+                        <outlet property="view1" destination="pwT-0a-ChQ" id="Ky8-Kn-EEs"/>
+                        <outlet property="view2" destination="fhC-rb-PYA" id="O82-r1-Jxw"/>
+                        <outlet property="view3" destination="LOg-2n-8rL" id="Jgz-lv-kRZ"/>
+                        <outlet property="view4" destination="IMf-yQ-j9S" id="9S2-kG-aHm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dxf-e8-NNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1348" y="1767.1664167916044"/>
         </scene>
         <!--Image Animator Vc View Controller-->
         <scene sceneID="hqD-Ma-cGc">
@@ -209,7 +285,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Oy-5p-JTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312.8" y="1330.8845577211396"/>
+            <point key="canvasLocation" x="1348" y="329"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dOp-wz-QZT">

@@ -15,6 +15,7 @@
 		F9B625741FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B625731FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift */; };
 		F9F32B151FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B141FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift */; };
 		F9F32B181FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B171FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift */; };
+		F9F32B1B1FAC018500B0B3C8 /* PassbookCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B1A1FAC018500B0B3C8 /* PassbookCardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		F9B625731FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewZoomExampleVc.swift; sourceTree = "<group>"; };
 		F9F32B141FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnimatorVcViewController.swift; sourceTree = "<group>"; };
 		F9F32B171FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewAutoLayoutViewController.swift; sourceTree = "<group>"; };
+		F9F32B1A1FAC018500B0B3C8 /* PassbookCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassbookCardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		F9B625721FA6C1D900D60493 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F9F32B191FAC016300B0B3C8 /* PassbookCard */,
 				F9F32B161FAAFD7600B0B3C8 /* ScrollviewAutolayout */,
 				F9F32B131FAABD6400B0B3C8 /* ImageAnimator */,
 				F9B625731FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift */,
@@ -95,6 +98,14 @@
 				F9F32B171FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift */,
 			);
 			path = ScrollviewAutolayout;
+			sourceTree = "<group>";
+		};
+		F9F32B191FAC016300B0B3C8 /* PassbookCard */ = {
+			isa = PBXGroup;
+			children = (
+				F9F32B1A1FAC018500B0B3C8 /* PassbookCardViewController.swift */,
+			);
+			path = PassbookCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +184,7 @@
 				F9F32B181FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift in Sources */,
 				F9B625621FA6C03800D60493 /* RootViewController.swift in Sources */,
 				F9B625601FA6C03800D60493 /* AppDelegate.swift in Sources */,
+				F9F32B1B1FAC018500B0B3C8 /* PassbookCardViewController.swift in Sources */,
 				F9B625741FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
