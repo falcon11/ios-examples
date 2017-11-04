@@ -6,6 +6,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Segues with Peek and Pop" minToolsVersion="7.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -77,7 +78,10 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="TPo-bf-Fdm" kind="show" id="Nbe-y0-p7d"/>
+                                            <segue destination="TPo-bf-Fdm" kind="show" id="Nbe-y0-p7d">
+                                                <segue key="commit" inheritsFrom="parent" id="BKE-lE-npz"/>
+                                                <segue key="preview" inheritsFrom="commit" id="cca-kC-6Ij"/>
+                                            </segue>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="jug-f0-a3Z" style="IBUITableViewCellStyleDefault" id="EL2-Vl-I2a">
@@ -98,6 +102,26 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="4hW-GK-4c5" kind="show" id="frW-ZL-Dg1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="clM-T1-yyG" style="IBUITableViewCellStyleDefault" id="ku3-6H-BGa">
+                                        <rect key="frame" x="0.0" y="176" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ku3-6H-BGa" id="AP4-dR-art">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="SpringPage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="clM-T1-yyG">
+                                                    <rect key="frame" x="16" y="0.0" width="344" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="bEs-uD-m5p" kind="show" id="QXV-95-kux"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -255,6 +279,35 @@
             </objects>
             <point key="canvasLocation" x="1348" y="1767.1664167916044"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Pz1-S4-0Mc">
+            <objects>
+                <viewController id="bEs-uD-m5p" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tOb-a9-29U">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TE0-zk-Vid" customClass="PageView" customModule="Examples" customModuleProvider="target">
+                                <rect key="frame" x="51" y="231" width="274" height="205"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="274" id="F6p-Cg-hiM"/>
+                                    <constraint firstAttribute="height" constant="205" id="STd-iQ-Ot9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="TE0-zk-Vid" firstAttribute="centerY" secondItem="tOb-a9-29U" secondAttribute="centerY" id="BGj-D2-9St"/>
+                            <constraint firstItem="TE0-zk-Vid" firstAttribute="centerX" secondItem="tOb-a9-29U" secondAttribute="centerX" id="OsP-Py-pjD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NbZ-KK-Pv0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="THQ-II-cAw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1365.5999999999999" y="2440.9295352323838"/>
+        </scene>
         <!--Image Animator Vc View Controller-->
         <scene sceneID="hqD-Ma-cGc">
             <objects>
@@ -311,4 +364,7 @@
     <resources>
         <image name="icon_pull_animation_1" width="68" height="95"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Nbe-y0-p7d"/>
+    </inferredMetricsTieBreakers>
 </document>

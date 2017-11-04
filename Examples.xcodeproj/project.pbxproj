@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84F779A29DDDCB27812A8E33 /* Pods_Examples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4A134BA81A0CDC894C97D4 /* Pods_Examples.framework */; };
 		F9B625601FA6C03800D60493 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B6255F1FA6C03800D60493 /* AppDelegate.swift */; };
 		F9B625621FA6C03800D60493 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B625611FA6C03800D60493 /* RootViewController.swift */; };
 		F9B625651FA6C03800D60493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9B625631FA6C03800D60493 /* Main.storyboard */; };
@@ -16,9 +17,14 @@
 		F9F32B151FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B141FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift */; };
 		F9F32B181FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B171FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift */; };
 		F9F32B1B1FAC018500B0B3C8 /* PassbookCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B1A1FAC018500B0B3C8 /* PassbookCardViewController.swift */; };
+		F9F32B1E1FAE101900B0B3C8 /* SpringPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B1D1FAE101900B0B3C8 /* SpringPageViewController.swift */; };
+		F9F32B201FAE103A00B0B3C8 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B1F1FAE103A00B0B3C8 /* PageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E4A134BA81A0CDC894C97D4 /* Pods_Examples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Examples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E3E32AF8E5BDE0B692E5F82 /* Pods-Examples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Examples.release.xcconfig"; path = "Pods/Target Support Files/Pods-Examples/Pods-Examples.release.xcconfig"; sourceTree = "<group>"; };
+		D44B9AFEC13E2A4F3FDFCA25 /* Pods-Examples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Examples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Examples/Pods-Examples.debug.xcconfig"; sourceTree = "<group>"; };
 		F9B6255C1FA6C03800D60493 /* Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Examples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9B6255F1FA6C03800D60493 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9B625611FA6C03800D60493 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +36,8 @@
 		F9F32B141FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnimatorVcViewController.swift; sourceTree = "<group>"; };
 		F9F32B171FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewAutoLayoutViewController.swift; sourceTree = "<group>"; };
 		F9F32B1A1FAC018500B0B3C8 /* PassbookCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassbookCardViewController.swift; sourceTree = "<group>"; };
+		F9F32B1D1FAE101900B0B3C8 /* SpringPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringPageViewController.swift; sourceTree = "<group>"; };
+		F9F32B1F1FAE103A00B0B3C8 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84F779A29DDDCB27812A8E33 /* Pods_Examples.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		977DE20B8F536CBD15F2FD41 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D44B9AFEC13E2A4F3FDFCA25 /* Pods-Examples.debug.xcconfig */,
+				4E3E32AF8E5BDE0B692E5F82 /* Pods-Examples.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BE79CC78D300D89E966B0C63 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E4A134BA81A0CDC894C97D4 /* Pods_Examples.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F9B625531FA6C03800D60493 = {
 			isa = PBXGroup;
 			children = (
 				F9B6255E1FA6C03800D60493 /* Examples */,
 				F9B6255D1FA6C03800D60493 /* Products */,
+				977DE20B8F536CBD15F2FD41 /* Pods */,
+				BE79CC78D300D89E966B0C63 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +104,7 @@
 		F9B625721FA6C1D900D60493 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F9F32B1C1FAE03CC00B0B3C8 /* SpringPage */,
 				F9F32B191FAC016300B0B3C8 /* PassbookCard */,
 				F9F32B161FAAFD7600B0B3C8 /* ScrollviewAutolayout */,
 				F9F32B131FAABD6400B0B3C8 /* ImageAnimator */,
@@ -108,6 +137,15 @@
 			path = PassbookCard;
 			sourceTree = "<group>";
 		};
+		F9F32B1C1FAE03CC00B0B3C8 /* SpringPage */ = {
+			isa = PBXGroup;
+			children = (
+				F9F32B1D1FAE101900B0B3C8 /* SpringPageViewController.swift */,
+				F9F32B1F1FAE103A00B0B3C8 /* PageView.swift */,
+			);
+			path = SpringPage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +153,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F9B6256E1FA6C03800D60493 /* Build configuration list for PBXNativeTarget "Examples" */;
 			buildPhases = (
+				9CB3CACCC92CAF172E927F6E /* [CP] Check Pods Manifest.lock */,
 				F9B625581FA6C03800D60493 /* Sources */,
 				F9B625591FA6C03800D60493 /* Frameworks */,
 				F9B6255A1FA6C03800D60493 /* Resources */,
+				C6EBE2F22D0FDDBF9AED26AD /* [CP] Embed Pods Frameworks */,
+				D6DD2CD98623A3D98A62E6E0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,17 +216,73 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9CB3CACCC92CAF172E927F6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Examples-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6EBE2F22D0FDDBF9AED26AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Examples/Pods-Examples-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Examples/Pods-Examples-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6DD2CD98623A3D98A62E6E0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Examples/Pods-Examples-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F9B625581FA6C03800D60493 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F9F32B151FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift in Sources */,
+				F9F32B201FAE103A00B0B3C8 /* PageView.swift in Sources */,
 				F9F32B181FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift in Sources */,
 				F9B625621FA6C03800D60493 /* RootViewController.swift in Sources */,
 				F9B625601FA6C03800D60493 /* AppDelegate.swift in Sources */,
 				F9F32B1B1FAC018500B0B3C8 /* PassbookCardViewController.swift in Sources */,
 				F9B625741FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift in Sources */,
+				F9F32B1E1FAE101900B0B3C8 /* SpringPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +417,7 @@
 		};
 		F9B6256F1FA6C03800D60493 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D44B9AFEC13E2A4F3FDFCA25 /* Pods-Examples.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -335,6 +433,7 @@
 		};
 		F9B625701FA6C03800D60493 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E3E32AF8E5BDE0B692E5F82 /* Pods-Examples.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
