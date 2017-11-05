@@ -14,6 +14,10 @@
 		F9B625671FA6C03800D60493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9B625661FA6C03800D60493 /* Assets.xcassets */; };
 		F9B6256A1FA6C03800D60493 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9B625681FA6C03800D60493 /* LaunchScreen.storyboard */; };
 		F9B625741FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B625731FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift */; };
+		F9E7B75B1FAF4A2C006F1AB2 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7B75A1FAF4A2C006F1AB2 /* ParentViewController.swift */; };
+		F9E7B75D1FAF4A3B006F1AB2 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7B75C1FAF4A3B006F1AB2 /* SubViewController.swift */; };
+		F9E7B75F1FAF4D3F006F1AB2 /* PresentedVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7B75E1FAF4D3F006F1AB2 /* PresentedVCDelegate.swift */; };
+		F9E7B7611FAF5A50006F1AB2 /* RotationPresentAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7B7601FAF5A50006F1AB2 /* RotationPresentAnimation.swift */; };
 		F9F32B151FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B141FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift */; };
 		F9F32B181FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B171FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift */; };
 		F9F32B1B1FAC018500B0B3C8 /* PassbookCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B1A1FAC018500B0B3C8 /* PassbookCardViewController.swift */; };
@@ -33,6 +37,10 @@
 		F9B625691FA6C03800D60493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9B6256B1FA6C03800D60493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9B625731FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewZoomExampleVc.swift; sourceTree = "<group>"; };
+		F9E7B75A1FAF4A2C006F1AB2 /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
+		F9E7B75C1FAF4A3B006F1AB2 /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
+		F9E7B75E1FAF4D3F006F1AB2 /* PresentedVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedVCDelegate.swift; sourceTree = "<group>"; };
+		F9E7B7601FAF5A50006F1AB2 /* RotationPresentAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationPresentAnimation.swift; sourceTree = "<group>"; };
 		F9F32B141FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnimatorVcViewController.swift; sourceTree = "<group>"; };
 		F9F32B171FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewAutoLayoutViewController.swift; sourceTree = "<group>"; };
 		F9F32B1A1FAC018500B0B3C8 /* PassbookCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassbookCardViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +112,7 @@
 		F9B625721FA6C1D900D60493 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F9E7B7591FAF49F6006F1AB2 /* CustomVCTransitioning */,
 				F9F32B1C1FAE03CC00B0B3C8 /* SpringPage */,
 				F9F32B191FAC016300B0B3C8 /* PassbookCard */,
 				F9F32B161FAAFD7600B0B3C8 /* ScrollviewAutolayout */,
@@ -111,6 +120,17 @@
 				F9B625731FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F9E7B7591FAF49F6006F1AB2 /* CustomVCTransitioning */ = {
+			isa = PBXGroup;
+			children = (
+				F9E7B75A1FAF4A2C006F1AB2 /* ParentViewController.swift */,
+				F9E7B75C1FAF4A3B006F1AB2 /* SubViewController.swift */,
+				F9E7B75E1FAF4D3F006F1AB2 /* PresentedVCDelegate.swift */,
+				F9E7B7601FAF5A50006F1AB2 /* RotationPresentAnimation.swift */,
+			);
+			path = CustomVCTransitioning;
 			sourceTree = "<group>";
 		};
 		F9F32B131FAABD6400B0B3C8 /* ImageAnimator */ = {
@@ -282,7 +302,11 @@
 				F9B625601FA6C03800D60493 /* AppDelegate.swift in Sources */,
 				F9F32B1B1FAC018500B0B3C8 /* PassbookCardViewController.swift in Sources */,
 				F9B625741FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift in Sources */,
+				F9E7B75D1FAF4A3B006F1AB2 /* SubViewController.swift in Sources */,
 				F9F32B1E1FAE101900B0B3C8 /* SpringPageViewController.swift in Sources */,
+				F9E7B75F1FAF4D3F006F1AB2 /* PresentedVCDelegate.swift in Sources */,
+				F9E7B7611FAF5A50006F1AB2 /* RotationPresentAnimation.swift in Sources */,
+				F9E7B75B1FAF4A2C006F1AB2 /* ParentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
