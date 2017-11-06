@@ -11,6 +11,8 @@ import UIKit
 class ParentViewController: UIViewController, PresentedVCDelegate, UIViewControllerTransitioningDelegate {
     
     var presentAnimation = RotationPresentAnimation()
+    var interactiveDismissAnimation = PanInteractiveTransition()
+    var dismissAnimation = RotationDismissAnimation()
     
     func didPresented(vc: UIViewController) {
         self.dismiss(animated: true, completion: nil)
@@ -40,11 +42,21 @@ class ParentViewController: UIViewController, PresentedVCDelegate, UIViewControl
         let vc : SubViewController = segue.destination as! SubViewController
         vc.delegate = self
         vc.transitioningDelegate = self
+        self.interactiveDismissAnimation.panToDismiss(vc: vc)
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         print(presented, presenting, source)
         return presentAnimation
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return dismissAnimation
+    }
+    
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        print("interaction controller for dismiss", interactiveDismissAnimation.isInteracting)
+        return interactiveDismissAnimation.isInteracting ? interactiveDismissAnimation : nil
     }
     
 
