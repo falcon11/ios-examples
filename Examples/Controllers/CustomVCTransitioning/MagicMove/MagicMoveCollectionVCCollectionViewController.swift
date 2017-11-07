@@ -12,9 +12,10 @@ private let reuseIdentifier = "Cell"
 
 class MagicMoveCollectionVCCollectionViewController: UICollectionViewController, UINavigationControllerDelegate {
     
+    var _panToPopController = PanToPop()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.delegate = self
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -22,6 +23,12 @@ class MagicMoveCollectionVCCollectionViewController: UICollectionViewController,
 //        self.collectionView!.register(MagicMoveCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
         // Do any additional setup after loading the view.
+        _panToPopController.addEdgesPanGestureTo(vc: self)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -93,11 +100,23 @@ class MagicMoveCollectionVCCollectionViewController: UICollectionViewController,
     
     // MARK: UINavigationViewControllerDelegate
     
+    public func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        if animationController.isKind(of: MagicMoveInverseTransition.self) {
+            return _panToPopController.percentDriveTransition
+        } else {
+            return nil
+        }
+    }
+    
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         if toVC.isKind(of: MagicMoveSubVC.self) {
             let transition = MagicMoveAnimation()
             return transition
-        } else {
+        }
+        else if operation == .pop {
+            return _panToPopController.inverseTransition
+        }
+        else {
             return nil
         }
     }
