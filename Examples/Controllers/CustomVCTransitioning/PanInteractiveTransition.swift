@@ -40,6 +40,7 @@ class PanInteractiveTransition: UIPercentDrivenInteractiveTransition {
                 self.cancel()
             } else {
                 self.finish()
+                self.critical = false
             }
             break
         default:
