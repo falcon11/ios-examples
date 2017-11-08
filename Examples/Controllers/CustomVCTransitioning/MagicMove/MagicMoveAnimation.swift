@@ -19,7 +19,9 @@ class MagicMoveAnimation: NSObject, UIViewControllerAnimatedTransitioning{
         let toVc : MagicMoveSubVC = transitionContext.viewController(forKey: .to) as! MagicMoveSubVC
         let containerView = transitionContext.containerView
         
-        let cell : MagicMoveCollectionViewCell = fromVc.collectionView?.cellForItem(at: (fromVc.collectionView?.indexPathsForSelectedItems?.first)!) as! MagicMoveCollectionViewCell
+        fromVc.selectedIndexPath = fromVc.collectionView?.indexPathsForSelectedItems?.first
+        let cell : MagicMoveCollectionViewCell = fromVc.collectionView?.cellForItem(at: fromVc.selectedIndexPath!) as! MagicMoveCollectionViewCell
+        
         let imageView = cell.imageView.snapshotView(afterScreenUpdates: false)
         imageView?.frame = containerView.convert(cell.imageView.frame, from: cell.imageView.superview)
         

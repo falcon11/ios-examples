@@ -13,6 +13,7 @@ private let reuseIdentifier = "Cell"
 class MagicMoveCollectionVCCollectionViewController: UICollectionViewController, UINavigationControllerDelegate {
     
     var _panToPopController = PanToPop()
+    var selectedIndexPath: IndexPath!
     
     override func viewDidLoad() {
         super.viewDidLoad()
