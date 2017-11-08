@@ -23,8 +23,11 @@ class MagicMoveSubVC: UIViewController, UINavigationControllerDelegate {
 //        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
-        self.navigationController?.delegate = self
         self.addGesture()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
