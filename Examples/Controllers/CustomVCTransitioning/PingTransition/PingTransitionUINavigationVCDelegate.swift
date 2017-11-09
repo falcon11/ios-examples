@@ -47,7 +47,6 @@ class PingTransitionUINavigationVCDelegate: NSObject, UINavigationControllerDele
             vc.isInteract = false
             if gesture.state == .ended && progress > 0.5 {
                 vc.interactiveTransition?.finish()
-                print("remove", viewVcDict.removeValue(forKey: gesture))
             } else {
                 vc.interactiveTransition?.cancel()
             }

@@ -14,6 +14,7 @@ class PingTransitionParentViewController: UIViewController, UINavigationControll
     
     var isInteract: Bool = false
     var navDelegate = PingTransitionUINavigationVCDelegate()
+    var panPop = PanToPop()
     
 //    var pingTransition = PingTransitionAnimation()
     @IBOutlet weak var button : UIButton!
@@ -23,6 +24,7 @@ class PingTransitionParentViewController: UIViewController, UINavigationControll
 
         // Do any additional setup after loading the view.
         self.button.layer.cornerRadius = self.button.bounds.width/2
+        self.panPop.addEdgesPanGestureTo(vc: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,22 +60,5 @@ class PingTransitionParentViewController: UIViewController, UINavigationControll
         // Pass the selected object to the new view controller.
     }
     */
-    
-//    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-//        return nil
-//    }
-//
-//    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-//        if operation == .push && fromVC == self && toVC.isKind(of: PingTransitionSubViewController.self) {
-//            let pingTransition = PingTransitionAnimation()
-//            pingTransition.isPush = true
-//            return pingTransition
-//        } else if operation == .pop && toVC == self {
-//            let pingTransition = PingTransitionAnimation()
-//            pingTransition.isPush = false
-//            return pingTransition
-//        }
-//        return nil
-//    }
 
 }
