@@ -15,6 +15,7 @@
 		F96ED2D81FB3EB8B00A3774B /* PingTransitionSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ED2D71FB3EB8B00A3774B /* PingTransitionSubViewController.swift */; };
 		F96ED2DA1FB3EC8B00A3774B /* PingTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ED2D91FB3EC8B00A3774B /* PingTransitionAnimation.swift */; };
 		F96ED2DC1FB42CCB00A3774B /* PingTransitionUINavigationVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ED2DB1FB42CCB00A3774B /* PingTransitionUINavigationVCDelegate.swift */; };
+		F96ED2E21FB5495C00A3774B /* WaterWaveVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ED2E11FB5495C00A3774B /* WaterWaveVCViewController.swift */; };
 		F9B625601FA6C03800D60493 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B6255F1FA6C03800D60493 /* AppDelegate.swift */; };
 		F9B625621FA6C03800D60493 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B625611FA6C03800D60493 /* RootViewController.swift */; };
 		F9B625651FA6C03800D60493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9B625631FA6C03800D60493 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		F96ED2D71FB3EB8B00A3774B /* PingTransitionSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingTransitionSubViewController.swift; sourceTree = "<group>"; };
 		F96ED2D91FB3EC8B00A3774B /* PingTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingTransitionAnimation.swift; sourceTree = "<group>"; };
 		F96ED2DB1FB42CCB00A3774B /* PingTransitionUINavigationVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingTransitionUINavigationVCDelegate.swift; sourceTree = "<group>"; };
+		F96ED2E11FB5495C00A3774B /* WaterWaveVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterWaveVCViewController.swift; sourceTree = "<group>"; };
 		F9B6255C1FA6C03800D60493 /* Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Examples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9B6255F1FA6C03800D60493 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9B625611FA6C03800D60493 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,22 @@
 			path = PingTransition;
 			sourceTree = "<group>";
 		};
+		F96ED2DF1FB5427700A3774B /* LayerAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F96ED2E01FB5493600A3774B /* LayerMask */,
+			);
+			path = LayerAnimation;
+			sourceTree = "<group>";
+		};
+		F96ED2E01FB5493600A3774B /* LayerMask */ = {
+			isa = PBXGroup;
+			children = (
+				F96ED2E11FB5495C00A3774B /* WaterWaveVCViewController.swift */,
+			);
+			path = LayerMask;
+			sourceTree = "<group>";
+		};
 		F9B625531FA6C03800D60493 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +165,7 @@
 		F9B625721FA6C1D900D60493 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F96ED2DF1FB5427700A3774B /* LayerAnimation */,
 				F9E7B7591FAF49F6006F1AB2 /* CustomVCTransitioning */,
 				F9F32B1C1FAE03CC00B0B3C8 /* SpringPage */,
 				F9F32B191FAC016300B0B3C8 /* PassbookCard */,
@@ -356,6 +375,7 @@
 				F93846461FB1615900072307 /* MagicMoveAnimation.swift in Sources */,
 				F9B625621FA6C03800D60493 /* RootViewController.swift in Sources */,
 				F9B625601FA6C03800D60493 /* AppDelegate.swift in Sources */,
+				F96ED2E21FB5495C00A3774B /* WaterWaveVCViewController.swift in Sources */,
 				F9E7B7651FAFE7CC006F1AB2 /* RotationDismissAnimation.swift in Sources */,
 				F96ED2D81FB3EB8B00A3774B /* PingTransitionSubViewController.swift in Sources */,
 				F938464D1FB1B28F00072307 /* PanToPop.swift in Sources */,
