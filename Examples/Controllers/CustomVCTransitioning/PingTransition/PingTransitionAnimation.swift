@@ -53,15 +53,28 @@ class PingTransitionAnimation: NSObject, UIViewControllerAnimatedTransitioning, 
         
         container.insertSubview(toVc.view, belowSubview: fromVc.view)
         
-        let finalMaskBP = UIBezierPath(ovalIn: button.frame)
+//        let finalMaskBP = UIBezierPath(ovalIn: button.frame)
         let finalPoint = CGPoint(x: button.center.x, y: fromVc.view.bounds.height - button.center.y)
         let radius = sqrt(finalPoint.x*finalPoint.x + finalPoint.y * finalPoint.y)
-        let startMaskBP = UIBezierPath(ovalIn: button.frame.insetBy(dx: -radius, dy: -radius))
-        
-        let maskLayer = CAShapeLayer()
-        maskLayer.path = finalMaskBP.cgPath
-        fromVc.view.layer.mask = maskLayer
-        self.addCALayerAnimation(toLayer: maskLayer, startPath: startMaskBP.cgPath, endPath: finalMaskBP.cgPath, duration: self.transitionDuration(using: transitionContext), pop: true)
+//        let startMaskBP = UIBezierPath(ovalIn: button.frame.insetBy(dx: -radius, dy: -radius))
+//
+//        let maskLayer = CAShapeLayer()
+//        maskLayer.path = finalMaskBP.cgPath
+//        fromVc.view.layer.mask = maskLayer
+        let maskView = UIView()
+        maskView.backgroundColor = UIColor.white
+        maskView.frame = CGRect(x: 0, y: 0, width: radius*2, height: radius*2)
+        maskView.layer.cornerRadius = radius
+        maskView.center = button.center
+        fromVc.view.mask = maskView
+//        not use calayer animation can also control the animation
+        UIView.animate(withDuration: self.transitionDuration(using: self.transitionContext), animations: {
+            maskView.frame = button.frame
+            maskView.layer.cornerRadius = button.bounds.width / 2
+        }) { (finished) in
+            self.transitionContext.completeTransition(!self.transitionContext.transitionWasCancelled)
+        }
+//        self.addCALayerAnimation(toLayer: maskLayer, startPath: startMaskBP.cgPath, endPath: finalMaskBP.cgPath, duration: self.transitionDuration(using: transitionContext), pop: true)
 //        UIView.animate(withDuration: 0.3, animations: {
 //            fromVc.view.frame = UIScreen.main.bounds.offsetBy(dx: UIScreen.main.bounds.width, dy: 0)
 //        }) { (finished) in
