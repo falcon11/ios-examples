@@ -9,9 +9,10 @@
 import UIKit
 
 class PanInteractiveTransition: UIPercentDrivenInteractiveTransition {
-    var presentedVC : UIViewController!
+    weak var presentedVC : UIViewController!
     var isInteracting: Bool = false
     var critical : Bool = false
+    var threshold: CGFloat = UIScreen.main.bounds.height*2/3
     
     public func panToDismiss(vc: UIViewController) {
         presentedVC = vc
@@ -29,9 +30,9 @@ class PanInteractiveTransition: UIPercentDrivenInteractiveTransition {
             self.presentedVC.dismiss(animated: true, completion: nil)
             break
         case .changed:
-            let percent = (transition.y/300) < 1 ? (transition.y/300):1
-            if percent>0.4 { self.critical = true }
-//            print("percent", percent)
+            let percent = (transition.y/self.threshold) < 1 ? (transition.y/self.threshold):1
+            self.critical = percent > 0.5
+            print("percent", percent)
             self.update(percent)
             break
         case .cancelled, .ended:
@@ -40,8 +41,8 @@ class PanInteractiveTransition: UIPercentDrivenInteractiveTransition {
                 self.cancel()
             } else {
                 self.finish()
-                self.critical = false
             }
+            self.critical = false
             break
         default:
             break

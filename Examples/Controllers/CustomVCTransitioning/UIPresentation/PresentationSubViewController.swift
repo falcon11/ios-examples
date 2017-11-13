@@ -9,6 +9,8 @@
 import UIKit
 
 class PresentationSubViewController: UIViewController, UIViewControllerTransitioningDelegate {
+    
+    var inverseTrainsition: PanInteractiveTransition! = PanInteractiveTransition()
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -24,6 +26,13 @@ class PresentationSubViewController: UIViewController, UIViewControllerTransitio
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.inverseTrainsition.panToDismiss(vc: self)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        self.inverseTrainsition.threshold = self.view.bounds.height
+        print("height", self.view.bounds.height)
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +54,15 @@ class PresentationSubViewController: UIViewController, UIViewControllerTransitio
         // Pass the selected object to the new view controller.
     }
     */
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let animationController = RotationDismissAnimation()
+        return animationController
+    }
+    
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return self.inverseTrainsition
+    }
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
         print(presented, presenting, source)

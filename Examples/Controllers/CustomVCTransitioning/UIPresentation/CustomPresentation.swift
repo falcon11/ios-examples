@@ -23,6 +23,8 @@ class CustomPresentation: UIPresentationController {
     
     override func presentationTransitionWillBegin() {
         print("custom presentation", self.presentingViewController, self.presentedViewController)
+        print("presentation container", self.containerView)
+        self.containerView?.addSubview(self.presentingViewController.view)
         self.containerView?.addSubview(self.bgView)
         self.containerView?.addSubview(presentedViewController.view)
         
@@ -53,6 +55,9 @@ class CustomPresentation: UIPresentationController {
     override func dismissalTransitionDidEnd(_ completed: Bool) {
         if completed {
             self.bgView.removeFromSuperview()
+            
+            // if not add this line self.presentingViewController will be released, what you will see is only a black window
+            UIApplication.shared.keyWindow?.addSubview(self.presentingViewController.view)
         }
     }
     
