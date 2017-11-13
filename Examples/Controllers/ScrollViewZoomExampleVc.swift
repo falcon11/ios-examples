@@ -104,7 +104,7 @@ class ScrollViewZoomExampleVc: UIViewController, UIScrollViewDelegate {
     }
     
     func scrollViewDidZoom(_ scrollView: UIScrollView) {
-        print("contentsize", scrollView.contentSize);
+        print("contentsize", scrollView.contentSize, scrollView.center);
         imageView.center = self.contentCenter(forBoundingSize: scrollView.bounds.size, contentSize: scrollView.contentSize)
     }
     

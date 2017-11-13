@@ -36,6 +36,8 @@
 		F9F32B1B1FAC018500B0B3C8 /* PassbookCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B1A1FAC018500B0B3C8 /* PassbookCardViewController.swift */; };
 		F9F32B1E1FAE101900B0B3C8 /* SpringPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B1D1FAE101900B0B3C8 /* SpringPageViewController.swift */; };
 		F9F32B201FAE103A00B0B3C8 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B1F1FAE103A00B0B3C8 /* PageView.swift */; };
+		F9F5A0E31FB94EA1004E41F3 /* PresentationSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F5A0E21FB94EA1004E41F3 /* PresentationSubViewController.swift */; };
+		F9F5A0E51FB9690E004E41F3 /* CustomPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F5A0E41FB9690E004E41F3 /* CustomPresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +74,8 @@
 		F9F32B1A1FAC018500B0B3C8 /* PassbookCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassbookCardViewController.swift; sourceTree = "<group>"; };
 		F9F32B1D1FAE101900B0B3C8 /* SpringPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringPageViewController.swift; sourceTree = "<group>"; };
 		F9F32B1F1FAE103A00B0B3C8 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
+		F9F5A0E21FB94EA1004E41F3 /* PresentationSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationSubViewController.swift; sourceTree = "<group>"; };
+		F9F5A0E41FB9690E004E41F3 /* CustomPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +183,7 @@
 		F9E7B7591FAF49F6006F1AB2 /* CustomVCTransitioning */ = {
 			isa = PBXGroup;
 			children = (
+				F9F5A0E11FB94E7D004E41F3 /* UIPresentation */,
 				F96ED2D41FB3E91300A3774B /* PingTransition */,
 				F9E7B7681FB159F3006F1AB2 /* MagicMove */,
 				F9E7B75A1FAF4A2C006F1AB2 /* ParentViewController.swift */,
@@ -235,6 +240,15 @@
 				F9F32B1F1FAE103A00B0B3C8 /* PageView.swift */,
 			);
 			path = SpringPage;
+			sourceTree = "<group>";
+		};
+		F9F5A0E11FB94E7D004E41F3 /* UIPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				F9F5A0E21FB94EA1004E41F3 /* PresentationSubViewController.swift */,
+				F9F5A0E41FB9690E004E41F3 /* CustomPresentation.swift */,
+			);
+			path = UIPresentation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,6 +383,7 @@
 				F9F32B151FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift in Sources */,
 				F93846481FB196DD00072307 /* MagicMoveInverseTransition.swift in Sources */,
 				F9E7B76A1FB15A24006F1AB2 /* MagicMoveCollectionViewCell.swift in Sources */,
+				F9F5A0E31FB94EA1004E41F3 /* PresentationSubViewController.swift in Sources */,
 				F9E7B7671FB1564E006F1AB2 /* MagicMoveCollectionVCCollectionViewController.swift in Sources */,
 				F9F32B201FAE103A00B0B3C8 /* PageView.swift in Sources */,
 				F9F32B181FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift in Sources */,
@@ -390,6 +405,7 @@
 				F9E7B76C1FB15DA1006F1AB2 /* MagicMoveSubVC.swift in Sources */,
 				F96ED2DA1FB3EC8B00A3774B /* PingTransitionAnimation.swift in Sources */,
 				F9E7B7611FAF5A50006F1AB2 /* RotationPresentAnimation.swift in Sources */,
+				F9F5A0E51FB9690E004E41F3 /* CustomPresentation.swift in Sources */,
 				F9E7B75B1FAF4A2C006F1AB2 /* ParentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
