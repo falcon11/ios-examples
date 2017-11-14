@@ -23,6 +23,7 @@
 		F9B6256A1FA6C03800D60493 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9B625681FA6C03800D60493 /* LaunchScreen.storyboard */; };
 		F9B625741FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B625731FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift */; };
 		F9DC41EF1FBA8C4400753BE4 /* JellyAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC41EE1FBA8C4400753BE4 /* JellyAnimationVC.swift */; };
+		F9DC41F31FBACFD400753BE4 /* BounceViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC41F21FBACFD400753BE4 /* BounceViewVC.swift */; };
 		F9E7B75B1FAF4A2C006F1AB2 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7B75A1FAF4A2C006F1AB2 /* ParentViewController.swift */; };
 		F9E7B75D1FAF4A3B006F1AB2 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7B75C1FAF4A3B006F1AB2 /* SubViewController.swift */; };
 		F9E7B75F1FAF4D3F006F1AB2 /* PresentedVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7B75E1FAF4D3F006F1AB2 /* PresentedVCDelegate.swift */; };
@@ -62,6 +63,7 @@
 		F9B6256B1FA6C03800D60493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9B625731FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewZoomExampleVc.swift; sourceTree = "<group>"; };
 		F9DC41EE1FBA8C4400753BE4 /* JellyAnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JellyAnimationVC.swift; sourceTree = "<group>"; };
+		F9DC41F21FBACFD400753BE4 /* BounceViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceViewVC.swift; sourceTree = "<group>"; };
 		F9E7B75A1FAF4A2C006F1AB2 /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		F9E7B75C1FAF4A3B006F1AB2 /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 		F9E7B75E1FAF4D3F006F1AB2 /* PresentedVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedVCDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 		F96ED2DF1FB5427700A3774B /* LayerAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				F9DC41F11FBACF9F00753BE4 /* BounceViewAnimation */,
 				F9DC41F01FBA96DE00753BE4 /* JellyAnimation */,
 				F96ED2E01FB5493600A3774B /* LayerMask */,
 			);
@@ -189,6 +192,14 @@
 				F9DC41EE1FBA8C4400753BE4 /* JellyAnimationVC.swift */,
 			);
 			path = JellyAnimation;
+			sourceTree = "<group>";
+		};
+		F9DC41F11FBACF9F00753BE4 /* BounceViewAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F9DC41F21FBACFD400753BE4 /* BounceViewVC.swift */,
+			);
+			name = BounceViewAnimation;
 			sourceTree = "<group>";
 		};
 		F9E7B7591FAF49F6006F1AB2 /* CustomVCTransitioning */ = {
@@ -401,6 +412,7 @@
 				F9F32B181FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift in Sources */,
 				F93846461FB1615900072307 /* MagicMoveAnimation.swift in Sources */,
 				F9B625621FA6C03800D60493 /* RootViewController.swift in Sources */,
+				F9DC41F31FBACFD400753BE4 /* BounceViewVC.swift in Sources */,
 				F9B625601FA6C03800D60493 /* AppDelegate.swift in Sources */,
 				F96ED2E21FB5495C00A3774B /* WaterWaveVCViewController.swift in Sources */,
 				F9E7B7651FAFE7CC006F1AB2 /* RotationDismissAnimation.swift in Sources */,
