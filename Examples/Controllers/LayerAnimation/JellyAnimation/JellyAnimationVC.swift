@@ -30,6 +30,7 @@ class JellyAnimationVC: UIViewController {
         self.addDisplayLink()
         self.assistantViewCenter.isHidden = true
         self.assistantViewSide.isHidden = true
+        self.jellyView.backgroundColor = waterColor
     }
     
     override func viewDidLayoutSubviews() {
@@ -61,6 +62,7 @@ class JellyAnimationVC: UIViewController {
     }
     
     @objc func hitMeAction() {
+        self.jellyView.backgroundColor = UIColor.clear
         self.displayLink.isPaused = false
         if isAtTop {
             self.animationPrepare()
