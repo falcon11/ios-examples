@@ -22,6 +22,7 @@
 		F9B625671FA6C03800D60493 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9B625661FA6C03800D60493 /* Assets.xcassets */; };
 		F9B6256A1FA6C03800D60493 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9B625681FA6C03800D60493 /* LaunchScreen.storyboard */; };
 		F9B625741FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B625731FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift */; };
+		F9DC41EF1FBA8C4400753BE4 /* JellyAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC41EE1FBA8C4400753BE4 /* JellyAnimationVC.swift */; };
 		F9E7B75B1FAF4A2C006F1AB2 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7B75A1FAF4A2C006F1AB2 /* ParentViewController.swift */; };
 		F9E7B75D1FAF4A3B006F1AB2 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7B75C1FAF4A3B006F1AB2 /* SubViewController.swift */; };
 		F9E7B75F1FAF4D3F006F1AB2 /* PresentedVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7B75E1FAF4D3F006F1AB2 /* PresentedVCDelegate.swift */; };
@@ -60,6 +61,7 @@
 		F9B625691FA6C03800D60493 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9B6256B1FA6C03800D60493 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9B625731FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewZoomExampleVc.swift; sourceTree = "<group>"; };
+		F9DC41EE1FBA8C4400753BE4 /* JellyAnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JellyAnimationVC.swift; sourceTree = "<group>"; };
 		F9E7B75A1FAF4A2C006F1AB2 /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		F9E7B75C1FAF4A3B006F1AB2 /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 		F9E7B75E1FAF4D3F006F1AB2 /* PresentedVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedVCDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		F96ED2DF1FB5427700A3774B /* LayerAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				F9DC41F01FBA96DE00753BE4 /* JellyAnimation */,
 				F96ED2E01FB5493600A3774B /* LayerMask */,
 			);
 			path = LayerAnimation;
@@ -178,6 +181,14 @@
 				F9B625731FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		F9DC41F01FBA96DE00753BE4 /* JellyAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F9DC41EE1FBA8C4400753BE4 /* JellyAnimationVC.swift */,
+			);
+			path = JellyAnimation;
 			sourceTree = "<group>";
 		};
 		F9E7B7591FAF49F6006F1AB2 /* CustomVCTransitioning */ = {
@@ -382,6 +393,7 @@
 			files = (
 				F9F32B151FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift in Sources */,
 				F93846481FB196DD00072307 /* MagicMoveInverseTransition.swift in Sources */,
+				F9DC41EF1FBA8C4400753BE4 /* JellyAnimationVC.swift in Sources */,
 				F9E7B76A1FB15A24006F1AB2 /* MagicMoveCollectionViewCell.swift in Sources */,
 				F9F5A0E31FB94EA1004E41F3 /* PresentationSubViewController.swift in Sources */,
 				F9E7B7671FB1564E006F1AB2 /* MagicMoveCollectionVCCollectionViewController.swift in Sources */,
