@@ -9,13 +9,16 @@
 import UIKit
 
 class BadgeAnimationViewController: UIViewController {
+    
+    @IBOutlet weak var containerView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        let badge = BadgeView(frame: CGRect(x: 100, y: 200, width: 30, height: 30))
-        badge.containerView = self.view
+        let badge = BadgeView(frame: CGRect(x: 100, y: 0, width: 100, height: 100))
+        badge.containerView = self.containerView
+        badge.badgeText = "99+"
     }
 
     override func didReceiveMemoryWarning() {

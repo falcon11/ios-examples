@@ -16,13 +16,20 @@ class BadgeView: UIView {
             setup()
         }
     }
+    var badgeLabel: UILabel! = UILabel()
     var badgeText: String! = "99+" {
         didSet {
             self.badgeLabel?.text = badgeText
             self.badgeLabel?.sizeToFit()
+            self.badgeLabel.textColor = self.textColor
+            self.badgeLabel.center = CGPoint(x:frontView.bounds.midX, y: frontView.bounds.midY)
         }
     }
-    var badgeLabel: UILabel! = UILabel()
+    var textColor: UIColor! = UIColor.white {
+        didSet {
+            self.badgeLabel.textColor = textColor
+        }
+    }
     var viscosity: CGFloat! = 20
     var badgeColor: UIColor! = UIColor.red
     var badgePosition: CGPoint? {
@@ -191,7 +198,7 @@ class BadgeView: UIView {
                     
                 })
             } else {
-                frontView.isHidden = true
+                frontView.boom()
             }
         default:
             break
@@ -232,4 +239,38 @@ class BadgeView: UIView {
         }
     }
 
+}
+
+private extension UIView {
+    func boom() -> Void {
+        self.isHidden = true
+        var images: [UIImage] = Array()
+        for i in 1...5 {
+            let image: UIImage! = UIImage(named: "unreadBomb_\(i)")
+            images.append(image)
+        }
+        let imageView = UIImageView()
+        imageView.frame = self.frame
+        self.superview?.addSubview(imageView)
+        imageView.animationImages = images
+        imageView.animationDuration = 0.5
+        imageView.animationRepeatCount = 1
+        imageView.startAnimating()
+        imageView.addImageAnimationObserver()
+    }
+}
+
+private extension UIImageView {
+    func addImageAnimationObserver() -> Void {
+        let dis = CADisplayLink(target: self, selector: #selector(displayLinkHandler(displayLink:)))
+        dis.add(to: RunLoop.main, forMode: .defaultRunLoopMode)
+    }
+    
+    @objc func displayLinkHandler(displayLink: CADisplayLink) -> Void {
+        print("self", self, displayLink)
+        if !self.isAnimating {
+            self.removeFromSuperview()
+            displayLink.invalidate()
+        }
+    }
 }
