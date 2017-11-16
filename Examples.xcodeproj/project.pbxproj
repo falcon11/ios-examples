@@ -24,6 +24,8 @@
 		F9B625741FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B625731FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift */; };
 		F9DC41EF1FBA8C4400753BE4 /* JellyAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC41EE1FBA8C4400753BE4 /* JellyAnimationVC.swift */; };
 		F9DC41F31FBACFD400753BE4 /* BounceViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC41F21FBACFD400753BE4 /* BounceViewVC.swift */; };
+		F9DC41F81FBC0B6300753BE4 /* BadgeAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC41F71FBC0B6300753BE4 /* BadgeAnimationViewController.swift */; };
+		F9DC41FA1FBC0B7C00753BE4 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DC41F91FBC0B7C00753BE4 /* BadgeView.swift */; };
 		F9E7B75B1FAF4A2C006F1AB2 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7B75A1FAF4A2C006F1AB2 /* ParentViewController.swift */; };
 		F9E7B75D1FAF4A3B006F1AB2 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7B75C1FAF4A3B006F1AB2 /* SubViewController.swift */; };
 		F9E7B75F1FAF4D3F006F1AB2 /* PresentedVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7B75E1FAF4D3F006F1AB2 /* PresentedVCDelegate.swift */; };
@@ -64,6 +66,8 @@
 		F9B625731FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewZoomExampleVc.swift; sourceTree = "<group>"; };
 		F9DC41EE1FBA8C4400753BE4 /* JellyAnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JellyAnimationVC.swift; sourceTree = "<group>"; };
 		F9DC41F21FBACFD400753BE4 /* BounceViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BounceViewVC.swift; sourceTree = "<group>"; };
+		F9DC41F71FBC0B6300753BE4 /* BadgeAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeAnimationViewController.swift; sourceTree = "<group>"; };
+		F9DC41F91FBC0B7C00753BE4 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		F9E7B75A1FAF4A2C006F1AB2 /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
 		F9E7B75C1FAF4A3B006F1AB2 /* SubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 		F9E7B75E1FAF4D3F006F1AB2 /* PresentedVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentedVCDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 		F96ED2DF1FB5427700A3774B /* LayerAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				F9DC41F61FBC0A6A00753BE4 /* BadgeAnimation */,
 				F9DC41F11FBACF9F00753BE4 /* BounceViewAnimation */,
 				F9DC41F01FBA96DE00753BE4 /* JellyAnimation */,
 				F96ED2E01FB5493600A3774B /* LayerMask */,
@@ -200,6 +205,15 @@
 				F9DC41F21FBACFD400753BE4 /* BounceViewVC.swift */,
 			);
 			name = BounceViewAnimation;
+			sourceTree = "<group>";
+		};
+		F9DC41F61FBC0A6A00753BE4 /* BadgeAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F9DC41F71FBC0B6300753BE4 /* BadgeAnimationViewController.swift */,
+				F9DC41F91FBC0B7C00753BE4 /* BadgeView.swift */,
+			);
+			path = BadgeAnimation;
 			sourceTree = "<group>";
 		};
 		F9E7B7591FAF49F6006F1AB2 /* CustomVCTransitioning */ = {
@@ -419,6 +433,7 @@
 				F96ED2D81FB3EB8B00A3774B /* PingTransitionSubViewController.swift in Sources */,
 				F938464D1FB1B28F00072307 /* PanToPop.swift in Sources */,
 				F96ED2D61FB3EB7200A3774B /* PingTransitionParentViewController.swift in Sources */,
+				F9DC41FA1FBC0B7C00753BE4 /* BadgeView.swift in Sources */,
 				F9F32B1B1FAC018500B0B3C8 /* PassbookCardViewController.swift in Sources */,
 				F9B625741FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift in Sources */,
 				F9E7B75D1FAF4A3B006F1AB2 /* SubViewController.swift in Sources */,
@@ -427,6 +442,7 @@
 				F9E7B7631FAF6D7C006F1AB2 /* PanInteractiveTransition.swift in Sources */,
 				F9E7B75F1FAF4D3F006F1AB2 /* PresentedVCDelegate.swift in Sources */,
 				F9E7B76C1FB15DA1006F1AB2 /* MagicMoveSubVC.swift in Sources */,
+				F9DC41F81FBC0B6300753BE4 /* BadgeAnimationViewController.swift in Sources */,
 				F96ED2DA1FB3EC8B00A3774B /* PingTransitionAnimation.swift in Sources */,
 				F9E7B7611FAF5A50006F1AB2 /* RotationPresentAnimation.swift in Sources */,
 				F9F5A0E51FB9690E004E41F3 /* CustomPresentation.swift in Sources */,
