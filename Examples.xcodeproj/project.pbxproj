@@ -11,6 +11,7 @@
 		F93846461FB1615900072307 /* MagicMoveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93846451FB1615900072307 /* MagicMoveAnimation.swift */; };
 		F93846481FB196DD00072307 /* MagicMoveInverseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93846471FB196DD00072307 /* MagicMoveInverseTransition.swift */; };
 		F938464D1FB1B28F00072307 /* PanToPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938464C1FB1B28F00072307 /* PanToPop.swift */; };
+		F960BAD31FC2CBDB0021196E /* DynamicAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F960BAD21FC2CBDB0021196E /* DynamicAnimationViewController.swift */; };
 		F96ED2D61FB3EB7200A3774B /* PingTransitionParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ED2D51FB3EB7200A3774B /* PingTransitionParentViewController.swift */; };
 		F96ED2D81FB3EB8B00A3774B /* PingTransitionSubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ED2D71FB3EB8B00A3774B /* PingTransitionSubViewController.swift */; };
 		F96ED2DA1FB3EC8B00A3774B /* PingTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ED2D91FB3EC8B00A3774B /* PingTransitionAnimation.swift */; };
@@ -51,6 +52,7 @@
 		F93846451FB1615900072307 /* MagicMoveAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicMoveAnimation.swift; sourceTree = "<group>"; };
 		F93846471FB196DD00072307 /* MagicMoveInverseTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicMoveInverseTransition.swift; sourceTree = "<group>"; };
 		F938464C1FB1B28F00072307 /* PanToPop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanToPop.swift; sourceTree = "<group>"; };
+		F960BAD21FC2CBDB0021196E /* DynamicAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicAnimationViewController.swift; sourceTree = "<group>"; };
 		F96ED2D51FB3EB7200A3774B /* PingTransitionParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingTransitionParentViewController.swift; sourceTree = "<group>"; };
 		F96ED2D71FB3EB8B00A3774B /* PingTransitionSubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingTransitionSubViewController.swift; sourceTree = "<group>"; };
 		F96ED2D91FB3EC8B00A3774B /* PingTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingTransitionAnimation.swift; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F960BAD11FC2CA280021196E /* DynamicAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F960BAD21FC2CBDB0021196E /* DynamicAnimationViewController.swift */,
+			);
+			name = DynamicAnimation;
+			sourceTree = "<group>";
+		};
 		F96ED2D41FB3E91300A3774B /* PingTransition */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +139,7 @@
 		F96ED2DF1FB5427700A3774B /* LayerAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				F960BAD11FC2CA280021196E /* DynamicAnimation */,
 				F9DC41F61FBC0A6A00753BE4 /* BadgeAnimation */,
 				F9DC41F11FBACF9F00753BE4 /* BounceViewAnimation */,
 				F9DC41F01FBA96DE00753BE4 /* JellyAnimation */,
@@ -435,6 +446,7 @@
 				F96ED2D61FB3EB7200A3774B /* PingTransitionParentViewController.swift in Sources */,
 				F9DC41FA1FBC0B7C00753BE4 /* BadgeView.swift in Sources */,
 				F9F32B1B1FAC018500B0B3C8 /* PassbookCardViewController.swift in Sources */,
+				F960BAD31FC2CBDB0021196E /* DynamicAnimationViewController.swift in Sources */,
 				F9B625741FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift in Sources */,
 				F9E7B75D1FAF4A3B006F1AB2 /* SubViewController.swift in Sources */,
 				F96ED2DC1FB42CCB00A3774B /* PingTransitionUINavigationVCDelegate.swift in Sources */,
