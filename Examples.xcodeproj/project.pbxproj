@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		84F779A29DDDCB27812A8E33 /* Pods_Examples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E4A134BA81A0CDC894C97D4 /* Pods_Examples.framework */; };
+		F9075DEA1FD3DD5E0004480D /* ThreeDTranstionFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9075DE91FD3DD5E0004480D /* ThreeDTranstionFirstVC.swift */; };
+		F9075DEC1FD3DD790004480D /* ThreeDTransitionSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9075DEB1FD3DD790004480D /* ThreeDTransitionSecondVC.swift */; };
+		F9075DEE1FD3DF200004480D /* ThreeDPushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9075DED1FD3DF200004480D /* ThreeDPushTransition.swift */; };
+		F9075DF01FD3DF320004480D /* ThreeDPopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9075DEF1FD3DF320004480D /* ThreeDPopTransition.swift */; };
+		F9075DF21FD400A00004480D /* ThreeDPopInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9075DF11FD400A00004480D /* ThreeDPopInteractiveTransition.swift */; };
 		F93846461FB1615900072307 /* MagicMoveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93846451FB1615900072307 /* MagicMoveAnimation.swift */; };
 		F93846481FB196DD00072307 /* MagicMoveInverseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93846471FB196DD00072307 /* MagicMoveInverseTransition.swift */; };
 		F938464D1FB1B28F00072307 /* PanToPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938464C1FB1B28F00072307 /* PanToPop.swift */; };
@@ -49,6 +54,11 @@
 		1E4A134BA81A0CDC894C97D4 /* Pods_Examples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Examples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E3E32AF8E5BDE0B692E5F82 /* Pods-Examples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Examples.release.xcconfig"; path = "Pods/Target Support Files/Pods-Examples/Pods-Examples.release.xcconfig"; sourceTree = "<group>"; };
 		D44B9AFEC13E2A4F3FDFCA25 /* Pods-Examples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Examples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Examples/Pods-Examples.debug.xcconfig"; sourceTree = "<group>"; };
+		F9075DE91FD3DD5E0004480D /* ThreeDTranstionFirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDTranstionFirstVC.swift; sourceTree = "<group>"; };
+		F9075DEB1FD3DD790004480D /* ThreeDTransitionSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDTransitionSecondVC.swift; sourceTree = "<group>"; };
+		F9075DED1FD3DF200004480D /* ThreeDPushTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDPushTransition.swift; sourceTree = "<group>"; };
+		F9075DEF1FD3DF320004480D /* ThreeDPopTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDPopTransition.swift; sourceTree = "<group>"; };
+		F9075DF11FD400A00004480D /* ThreeDPopInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDPopInteractiveTransition.swift; sourceTree = "<group>"; };
 		F93846451FB1615900072307 /* MagicMoveAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicMoveAnimation.swift; sourceTree = "<group>"; };
 		F93846471FB196DD00072307 /* MagicMoveInverseTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicMoveInverseTransition.swift; sourceTree = "<group>"; };
 		F938464C1FB1B28F00072307 /* PanToPop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanToPop.swift; sourceTree = "<group>"; };
@@ -115,6 +125,18 @@
 				1E4A134BA81A0CDC894C97D4 /* Pods_Examples.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F9075DE81FD3DD260004480D /* 3DTransition */ = {
+			isa = PBXGroup;
+			children = (
+				F9075DE91FD3DD5E0004480D /* ThreeDTranstionFirstVC.swift */,
+				F9075DEB1FD3DD790004480D /* ThreeDTransitionSecondVC.swift */,
+				F9075DED1FD3DF200004480D /* ThreeDPushTransition.swift */,
+				F9075DEF1FD3DF320004480D /* ThreeDPopTransition.swift */,
+				F9075DF11FD400A00004480D /* ThreeDPopInteractiveTransition.swift */,
+			);
+			path = 3DTransition;
 			sourceTree = "<group>";
 		};
 		F960BAD11FC2CA280021196E /* DynamicAnimation */ = {
@@ -230,6 +252,7 @@
 		F9E7B7591FAF49F6006F1AB2 /* CustomVCTransitioning */ = {
 			isa = PBXGroup;
 			children = (
+				F9075DE81FD3DD260004480D /* 3DTransition */,
 				F9F5A0E11FB94E7D004E41F3 /* UIPresentation */,
 				F96ED2D41FB3E91300A3774B /* PingTransition */,
 				F9E7B7681FB159F3006F1AB2 /* MagicMove */,
@@ -428,11 +451,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9F32B151FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift in Sources */,
+				F9075DF21FD400A00004480D /* ThreeDPopInteractiveTransition.swift in Sources */,
 				F93846481FB196DD00072307 /* MagicMoveInverseTransition.swift in Sources */,
 				F9DC41EF1FBA8C4400753BE4 /* JellyAnimationVC.swift in Sources */,
 				F9E7B76A1FB15A24006F1AB2 /* MagicMoveCollectionViewCell.swift in Sources */,
 				F9F5A0E31FB94EA1004E41F3 /* PresentationSubViewController.swift in Sources */,
 				F9E7B7671FB1564E006F1AB2 /* MagicMoveCollectionVCCollectionViewController.swift in Sources */,
+				F9075DF01FD3DF320004480D /* ThreeDPopTransition.swift in Sources */,
+				F9075DEA1FD3DD5E0004480D /* ThreeDTranstionFirstVC.swift in Sources */,
 				F9F32B201FAE103A00B0B3C8 /* PageView.swift in Sources */,
 				F9F32B181FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift in Sources */,
 				F93846461FB1615900072307 /* MagicMoveAnimation.swift in Sources */,
@@ -444,10 +470,12 @@
 				F96ED2D81FB3EB8B00A3774B /* PingTransitionSubViewController.swift in Sources */,
 				F938464D1FB1B28F00072307 /* PanToPop.swift in Sources */,
 				F96ED2D61FB3EB7200A3774B /* PingTransitionParentViewController.swift in Sources */,
+				F9075DEE1FD3DF200004480D /* ThreeDPushTransition.swift in Sources */,
 				F9DC41FA1FBC0B7C00753BE4 /* BadgeView.swift in Sources */,
 				F9F32B1B1FAC018500B0B3C8 /* PassbookCardViewController.swift in Sources */,
 				F960BAD31FC2CBDB0021196E /* DynamicAnimationViewController.swift in Sources */,
 				F9B625741FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift in Sources */,
+				F9075DEC1FD3DD790004480D /* ThreeDTransitionSecondVC.swift in Sources */,
 				F9E7B75D1FAF4A3B006F1AB2 /* SubViewController.swift in Sources */,
 				F96ED2DC1FB42CCB00A3774B /* PingTransitionUINavigationVCDelegate.swift in Sources */,
 				F9F32B1E1FAE101900B0B3C8 /* SpringPageViewController.swift in Sources */,
