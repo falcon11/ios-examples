@@ -13,6 +13,7 @@
 		F9075DEE1FD3DF200004480D /* ThreeDPushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9075DED1FD3DF200004480D /* ThreeDPushTransition.swift */; };
 		F9075DF01FD3DF320004480D /* ThreeDPopTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9075DEF1FD3DF320004480D /* ThreeDPopTransition.swift */; };
 		F9075DF21FD400A00004480D /* ThreeDPopInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9075DF11FD400A00004480D /* ThreeDPopInteractiveTransition.swift */; };
+		F909DF651FF3356A00439FEF /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F909DF641FF3356A00439FEF /* Logger.swift */; };
 		F93846461FB1615900072307 /* MagicMoveAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93846451FB1615900072307 /* MagicMoveAnimation.swift */; };
 		F93846481FB196DD00072307 /* MagicMoveInverseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93846471FB196DD00072307 /* MagicMoveInverseTransition.swift */; };
 		F938464D1FB1B28F00072307 /* PanToPop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F938464C1FB1B28F00072307 /* PanToPop.swift */; };
@@ -61,6 +62,7 @@
 		F9075DED1FD3DF200004480D /* ThreeDPushTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDPushTransition.swift; sourceTree = "<group>"; };
 		F9075DEF1FD3DF320004480D /* ThreeDPopTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDPopTransition.swift; sourceTree = "<group>"; };
 		F9075DF11FD400A00004480D /* ThreeDPopInteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeDPopInteractiveTransition.swift; sourceTree = "<group>"; };
+		F909DF641FF3356A00439FEF /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		F93846451FB1615900072307 /* MagicMoveAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicMoveAnimation.swift; sourceTree = "<group>"; };
 		F93846471FB196DD00072307 /* MagicMoveInverseTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicMoveInverseTransition.swift; sourceTree = "<group>"; };
 		F938464C1FB1B28F00072307 /* PanToPop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanToPop.swift; sourceTree = "<group>"; };
@@ -143,6 +145,14 @@
 			path = 3DTransition;
 			sourceTree = "<group>";
 		};
+		F909DF631FF3350A00439FEF /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F909DF641FF3356A00439FEF /* Logger.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		F960BAD11FC2CA280021196E /* DynamicAnimation */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +213,7 @@
 		F9B6255E1FA6C03800D60493 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				F909DF631FF3350A00439FEF /* Utils */,
 				F9E9313F1FF24707008FBAC5 /* Storyboards */,
 				F9B625721FA6C1D900D60493 /* Controllers */,
 				F9B6255F1FA6C03800D60493 /* AppDelegate.swift */,
@@ -440,10 +451,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Examples/Pods-Examples-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBeaver/SwiftyBeaver.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBeaver.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +508,7 @@
 				F96ED2D61FB3EB7200A3774B /* PingTransitionParentViewController.swift in Sources */,
 				F9075DEE1FD3DF200004480D /* ThreeDPushTransition.swift in Sources */,
 				F9DC41FA1FBC0B7C00753BE4 /* BadgeView.swift in Sources */,
+				F909DF651FF3356A00439FEF /* Logger.swift in Sources */,
 				F9F32B1B1FAC018500B0B3C8 /* PassbookCardViewController.swift in Sources */,
 				F960BAD31FC2CBDB0021196E /* DynamicAnimationViewController.swift in Sources */,
 				F9B625741FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift in Sources */,

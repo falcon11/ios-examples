@@ -25,12 +25,14 @@ class WebViewLoadUrlVC: UIViewController, WKUIDelegate {
     func setupWebView() {
         // observe progress to update progressView
         webView.addObserver(self, forKeyPath: "estimatedProgress", options: [.new], context: nil)
+        webView.addObserver(self, forKeyPath: "title", options: [.new], context: nil)
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        print("keypath:\(String(describing: keyPath))\nobject:\(String(describing: object))\nchange:\(String(describing: change))")
+        log.info("keypath:\(String(describing: keyPath))\nobject:\(String(describing: object))\nchange:\(String(describing: change))")
         progressView.progress = Float(webView.estimatedProgress)
         progressView.isHidden = progressView.progress == Float(1)
+        self.title = webView.title
     }
     
     func loadWeb() -> Void {

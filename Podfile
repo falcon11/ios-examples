@@ -7,5 +7,6 @@ target 'Examples' do
 
   # Pods for Examples
   pod 'pop', '~> 1.0'
+  pod 'SwiftyBeaver'
 
 end
