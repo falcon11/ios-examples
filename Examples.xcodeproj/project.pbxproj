@@ -41,6 +41,8 @@
 		F9E7B7671FB1564E006F1AB2 /* MagicMoveCollectionVCCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7B7661FB1564E006F1AB2 /* MagicMoveCollectionVCCollectionViewController.swift */; };
 		F9E7B76A1FB15A24006F1AB2 /* MagicMoveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7B7691FB15A24006F1AB2 /* MagicMoveCollectionViewCell.swift */; };
 		F9E7B76C1FB15DA1006F1AB2 /* MagicMoveSubVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E7B76B1FB15DA1006F1AB2 /* MagicMoveSubVC.swift */; };
+		F9E931411FF24738008FBAC5 /* EXOne.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9E931401FF24738008FBAC5 /* EXOne.storyboard */; };
+		F9E931441FF24853008FBAC5 /* WebViewLoadUrlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E931431FF24853008FBAC5 /* WebViewLoadUrlVC.swift */; };
 		F9F32B151FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B141FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift */; };
 		F9F32B181FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B171FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift */; };
 		F9F32B1B1FAC018500B0B3C8 /* PassbookCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F32B1A1FAC018500B0B3C8 /* PassbookCardViewController.swift */; };
@@ -89,6 +91,8 @@
 		F9E7B7661FB1564E006F1AB2 /* MagicMoveCollectionVCCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicMoveCollectionVCCollectionViewController.swift; sourceTree = "<group>"; };
 		F9E7B7691FB15A24006F1AB2 /* MagicMoveCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicMoveCollectionViewCell.swift; sourceTree = "<group>"; };
 		F9E7B76B1FB15DA1006F1AB2 /* MagicMoveSubVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicMoveSubVC.swift; sourceTree = "<group>"; };
+		F9E931401FF24738008FBAC5 /* EXOne.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EXOne.storyboard; sourceTree = "<group>"; };
+		F9E931431FF24853008FBAC5 /* WebViewLoadUrlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewLoadUrlVC.swift; sourceTree = "<group>"; };
 		F9F32B141FAABD8300B0B3C8 /* ImageAnimatorVcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageAnimatorVcViewController.swift; sourceTree = "<group>"; };
 		F9F32B171FAAFD9B00B0B3C8 /* ScrollViewAutoLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewAutoLayoutViewController.swift; sourceTree = "<group>"; };
 		F9F32B1A1FAC018500B0B3C8 /* PassbookCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassbookCardViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 		F9B6255E1FA6C03800D60493 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				F9E9313F1FF24707008FBAC5 /* Storyboards */,
 				F9B625721FA6C1D900D60493 /* Controllers */,
 				F9B6255F1FA6C03800D60493 /* AppDelegate.swift */,
 				F9B625611FA6C03800D60493 /* RootViewController.swift */,
@@ -213,6 +218,7 @@
 		F9B625721FA6C1D900D60493 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F9E931421FF2481F008FBAC5 /* WebView */,
 				F96ED2DF1FB5427700A3774B /* LayerAnimation */,
 				F9E7B7591FAF49F6006F1AB2 /* CustomVCTransitioning */,
 				F9F32B1C1FAE03CC00B0B3C8 /* SpringPage */,
@@ -277,6 +283,22 @@
 				F938464C1FB1B28F00072307 /* PanToPop.swift */,
 			);
 			path = MagicMove;
+			sourceTree = "<group>";
+		};
+		F9E9313F1FF24707008FBAC5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F9E931401FF24738008FBAC5 /* EXOne.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F9E931421FF2481F008FBAC5 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				F9E931431FF24853008FBAC5 /* WebViewLoadUrlVC.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		F9F32B131FAABD6400B0B3C8 /* ImageAnimator */ = {
@@ -386,6 +408,7 @@
 				F9B6256A1FA6C03800D60493 /* LaunchScreen.storyboard in Resources */,
 				F9B625671FA6C03800D60493 /* Assets.xcassets in Resources */,
 				F9B625651FA6C03800D60493 /* Main.storyboard in Resources */,
+				F9E931411FF24738008FBAC5 /* EXOne.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +507,7 @@
 				F9E7B76C1FB15DA1006F1AB2 /* MagicMoveSubVC.swift in Sources */,
 				F9DC41F81FBC0B6300753BE4 /* BadgeAnimationViewController.swift in Sources */,
 				F96ED2DA1FB3EC8B00A3774B /* PingTransitionAnimation.swift in Sources */,
+				F9E931441FF24853008FBAC5 /* WebViewLoadUrlVC.swift in Sources */,
 				F9E7B7611FAF5A50006F1AB2 /* RotationPresentAnimation.swift in Sources */,
 				F9F5A0E51FB9690E004E41F3 /* CustomPresentation.swift in Sources */,
 				F9E7B75B1FAF4A2C006F1AB2 /* ParentViewController.swift in Sources */,
