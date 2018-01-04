@@ -15,6 +15,11 @@ class RootViewController: UITableViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationController?.navigationBar.tintColor = UIColor.white
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated);
+        YYViewHierarchy3D.show();
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

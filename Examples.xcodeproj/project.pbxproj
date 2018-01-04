@@ -23,6 +23,10 @@
 		F96ED2DA1FB3EC8B00A3774B /* PingTransitionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ED2D91FB3EC8B00A3774B /* PingTransitionAnimation.swift */; };
 		F96ED2DC1FB42CCB00A3774B /* PingTransitionUINavigationVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ED2DB1FB42CCB00A3774B /* PingTransitionUINavigationVCDelegate.swift */; };
 		F96ED2E21FB5495C00A3774B /* WaterWaveVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96ED2E11FB5495C00A3774B /* WaterWaveVCViewController.swift */; };
+		F97B8D961FFE2264001EF2ED /* YYView3D.png in Resources */ = {isa = PBXBuildFile; fileRef = F97B8D911FFE2264001EF2ED /* YYView3D.png */; };
+		F97B8D971FFE2264001EF2ED /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F97B8D931FFE2264001EF2ED /* README.md */; };
+		F97B8D981FFE2264001EF2ED /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = F97B8D941FFE2264001EF2ED /* .gitignore */; };
+		F97B8D991FFE2264001EF2ED /* YYViewHierarchy3D.m in Sources */ = {isa = PBXBuildFile; fileRef = F97B8D951FFE2264001EF2ED /* YYViewHierarchy3D.m */; };
 		F9B625601FA6C03800D60493 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B6255F1FA6C03800D60493 /* AppDelegate.swift */; };
 		F9B625621FA6C03800D60493 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B625611FA6C03800D60493 /* RootViewController.swift */; };
 		F9B625651FA6C03800D60493 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9B625631FA6C03800D60493 /* Main.storyboard */; };
@@ -72,6 +76,12 @@
 		F96ED2D91FB3EC8B00A3774B /* PingTransitionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingTransitionAnimation.swift; sourceTree = "<group>"; };
 		F96ED2DB1FB42CCB00A3774B /* PingTransitionUINavigationVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PingTransitionUINavigationVCDelegate.swift; sourceTree = "<group>"; };
 		F96ED2E11FB5495C00A3774B /* WaterWaveVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterWaveVCViewController.swift; sourceTree = "<group>"; };
+		F97B8D911FFE2264001EF2ED /* YYView3D.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YYView3D.png; sourceTree = "<group>"; };
+		F97B8D921FFE2264001EF2ED /* YYViewHierarchy3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYViewHierarchy3D.h; sourceTree = "<group>"; };
+		F97B8D931FFE2264001EF2ED /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F97B8D941FFE2264001EF2ED /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		F97B8D951FFE2264001EF2ED /* YYViewHierarchy3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYViewHierarchy3D.m; sourceTree = "<group>"; };
+		F97B8D9A1FFE23F4001EF2ED /* ExamplesOCBridgeHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExamplesOCBridgeHeaders.h; sourceTree = "<group>"; };
 		F9B6255C1FA6C03800D60493 /* Examples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Examples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9B6255F1FA6C03800D60493 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9B625611FA6C03800D60493 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +202,42 @@
 			path = LayerMask;
 			sourceTree = "<group>";
 		};
+		F97B8D8D1FFE2200001EF2ED /* External */ = {
+			isa = PBXGroup;
+			children = (
+				F97B8D8E1FFE2233001EF2ED /* Vendors */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		F97B8D8E1FFE2233001EF2ED /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				F97B8D8F1FFE2264001EF2ED /* YYViewHierarchy3D */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		F97B8D8F1FFE2264001EF2ED /* YYViewHierarchy3D */ = {
+			isa = PBXGroup;
+			children = (
+				F97B8D901FFE2264001EF2ED /* Demo */,
+				F97B8D921FFE2264001EF2ED /* YYViewHierarchy3D.h */,
+				F97B8D931FFE2264001EF2ED /* README.md */,
+				F97B8D941FFE2264001EF2ED /* .gitignore */,
+				F97B8D951FFE2264001EF2ED /* YYViewHierarchy3D.m */,
+			);
+			path = YYViewHierarchy3D;
+			sourceTree = "<group>";
+		};
+		F97B8D901FFE2264001EF2ED /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				F97B8D911FFE2264001EF2ED /* YYView3D.png */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
 		F9B625531FA6C03800D60493 = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +259,7 @@
 		F9B6255E1FA6C03800D60493 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				F97B8D8D1FFE2200001EF2ED /* External */,
 				F909DF631FF3350A00439FEF /* Utils */,
 				F9E9313F1FF24707008FBAC5 /* Storyboards */,
 				F9B625721FA6C1D900D60493 /* Controllers */,
@@ -222,6 +269,7 @@
 				F9B625661FA6C03800D60493 /* Assets.xcassets */,
 				F9B625681FA6C03800D60493 /* LaunchScreen.storyboard */,
 				F9B6256B1FA6C03800D60493 /* Info.plist */,
+				F97B8D9A1FFE23F4001EF2ED /* ExamplesOCBridgeHeaders.h */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -416,6 +464,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F97B8D971FFE2264001EF2ED /* README.md in Resources */,
+				F97B8D981FFE2264001EF2ED /* .gitignore in Resources */,
+				F97B8D961FFE2264001EF2ED /* YYView3D.png in Resources */,
 				F9B6256A1FA6C03800D60493 /* LaunchScreen.storyboard in Resources */,
 				F9B625671FA6C03800D60493 /* Assets.xcassets in Resources */,
 				F9B625651FA6C03800D60493 /* Main.storyboard in Resources */,
@@ -511,6 +562,7 @@
 				F909DF651FF3356A00439FEF /* Logger.swift in Sources */,
 				F9F32B1B1FAC018500B0B3C8 /* PassbookCardViewController.swift in Sources */,
 				F960BAD31FC2CBDB0021196E /* DynamicAnimationViewController.swift in Sources */,
+				F97B8D991FFE2264001EF2ED /* YYViewHierarchy3D.m in Sources */,
 				F9B625741FA6C1FD00D60493 /* ScrollViewZoomExampleVc.swift in Sources */,
 				F9075DEC1FD3DD790004480D /* ThreeDTransitionSecondVC.swift in Sources */,
 				F9E7B75D1FAF4A3B006F1AB2 /* SubViewController.swift in Sources */,
@@ -668,6 +720,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ashoka.Examples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Examples/ExamplesOCBridgeHeaders.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -684,6 +737,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ashoka.Examples;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Examples/ExamplesOCBridgeHeaders.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
